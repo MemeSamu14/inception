@@ -1,7 +1,7 @@
-down:
-	cd srcs && docker-compose down -v && rm -rf ./requirements/wordpress/data && rm -rf ./requirements/mariadb/data
 build:
-	cd srcs && docker-compose up --build
+	cd srcs && docker-compose up --build -d
+down:
+	cd srcs && docker-compose down -v && rm -rf /home/data/wordpress && rm -rf /home/data/mariadb
 ps:
 	cd srcs && docker-compose ps
 logs:
